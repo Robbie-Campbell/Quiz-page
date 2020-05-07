@@ -12,7 +12,7 @@ body{
 }
 .game{
     position: relative;
-    top:50%;
+    top:40%;
     left:50%;
     transform: translateX(-50%) translateY(-50%);
     color: white;
@@ -29,6 +29,10 @@ body{
 .disabled{
     pointer-events: none;
     opacity:0.6;
+}
+.answerText{
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .appear{

@@ -4,6 +4,7 @@ const output = document.querySelector(".output");
 const input = document.querySelector(".input-word");
 const start = document.querySelector(".start");
 const title = document.querySelector(".title");
+const answer = document.querySelector(".answer");
 let Stringletters = "";
 let i = 0;
 
@@ -14,7 +15,8 @@ function play(){
 
 function letterAdd(){
     output.classList.add("appear");
-            output.append(Stringletters[i] + "\n");
+        let words = Stringletters.split(" ")
+            output.append(words[i].charAt(0) + "\n");
             play();
             i++;
             var seconds = 0;
@@ -27,10 +29,9 @@ function letterAdd(){
                 
             }
              200});
-            if(Stringletters.length == i|| Stringletters.length == 0)
+            if(words.length == i)
             {
                 revealLetter.classList.add("disabled");
-                Stringletters = "";
             }
 }
 
@@ -46,7 +47,7 @@ function getFirstLetters()
         console.log(Stringletters);
     })
     document.body.onkeyup = function(e){
-        if(e.keyCode == 32 ){
+        if(e.keyCode == 13 ){
             if(Stringletters.length > i)
             {
                 letterAdd();
@@ -65,11 +66,20 @@ function startNewLyrics()
 {
     start.addEventListener("click", ()=>{
         Stringletters.value = "";
-        output.textContent = "";
+        output.textContent = "First letters: ";
         revealLetter.classList.remove("disabled");
+        document.querySelector(".answerText").textContent = "Answer: ";
         i = 0;
+    })
+}
+
+function revealAnswer()
+{
+    answer.addEventListener("click", ()=>{
+        document.querySelector(".answerText").textContent = Stringletters + "!";
     })
 }
 
 getFirstLetters();
 startNewLyrics();
+revealAnswer();
