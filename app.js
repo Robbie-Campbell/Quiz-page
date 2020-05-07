@@ -66,7 +66,7 @@ function startNewLyrics()
 {
     start.addEventListener("click", ()=>{
         Stringletters.value = "";
-        output.textContent = "First letters: ";
+        output.textContent = "Lyrics:";
         revealLetter.classList.remove("disabled");
         document.querySelector(".answerText").textContent = "Answer: ";
         i = 0;
