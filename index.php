@@ -17,14 +17,14 @@
         <div class="game text-center">
         <h1 class="output">Lyrics: </h1>
         <button class="reveal btn btn-light">Click to reveal a letter</button>
-        <button class="start btn btn-light">Start a new word</button>
+        <button class="start btn btn-light">Start a new lyric set</button>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
               <button class="input-word btn btn-outline-secondary" type="button" id="button-addon1">Enter word</button>
             </div>
             <input type="password" class="song form-control" placeholder="Input a word for the game" aria-describedby="button-addon1">
           </div>
-        <button class="answer btn btn-light">Reveal the answer.</button>
+        <button class="answer btn btn-light">Reveal the Lyrics.</button>
 
     </div>
     </div>
