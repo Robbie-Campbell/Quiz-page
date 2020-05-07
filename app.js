@@ -13,6 +13,11 @@ function play(){
 }
 
 function letterAdd(){
+    if(Stringletters == "")
+            {
+                revealLetter.classList.add("disabled");
+                Stringletters = "";
+            }
     output.classList.add("appear");
             output.append(Stringletters[i] + "\n");
             play();
