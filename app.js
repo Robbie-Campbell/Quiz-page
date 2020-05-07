@@ -12,6 +12,10 @@ function play(){
     audio.play();
 }
 
+if (Stringletters.length == 0)
+{
+    revealLetter.classList.add("disabled")
+}
 function letterAdd(){
     output.classList.add("appear");
             output.append(Stringletters[i] + "\n");
